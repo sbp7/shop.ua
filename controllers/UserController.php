@@ -49,6 +49,7 @@ class UserController
     {
         $email = '';
         $password = '';
+        $referrer = $_SERVER['HTTP_REFERER'];
 
         if (isset ($_POST['submit'])){
 
