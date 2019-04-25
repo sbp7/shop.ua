@@ -11,6 +11,11 @@ return [
     'user/logout' => 'user/logout',
     'user/login' => 'user/login',
     'user/register' => 'user/register',
+    'contacts' => 'site/contact',
+    'cart/addAjax/([0-9]+)' => 'cart/addAjax/$1',
+    'cart/delete/([0-9]+)' => 'cart/delete/$1',
+    'cart/checkout' => 'cart/checkout',
+    'cart' => 'cart/index',
     '' => 'site/home',
 ]
 ?>

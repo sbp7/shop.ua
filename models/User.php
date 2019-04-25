@@ -64,6 +64,14 @@ class User
        return false;
     }
 
+    public static function checkPhone ($phone)
+    {
+        if (preg_match("/^[0-9]{10}$/",$phone)){
+            return true;
+        }
+        return false;
+    }
+
     public static function checkPassword ($password)
     {
         if (strlen ($password) >= 6){

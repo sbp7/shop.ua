@@ -39,7 +39,11 @@
                                                     <?php echo $product ['name']?>
                                                </a>
                                             </p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                            <a href="/cart/addAjax/<?php echo $product ['id']?>" class="btn btn-default add-to-cart"
+                                                data-id="<?php echo $product ['id'] ?>">
+                                                <i class="fa fa-shopping-cart"></i>
+                                                В корзину
+                                            </a>
                                         </div>
                                         <?php if ($product ['is_new']) : ?>
                                                   <img src="/template/images/home/new.png" class="new" alt="" />
@@ -72,7 +76,11 @@
                                                                 <?php echo $recommendedProducts[$i]['name']?>
                                                             </a>
                                                         </p>
-                                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                                        <a href="/cart/addAjax/<?php echo $recommendedProducts[$i]['id']?>" class="btn btn-default add-to-cart"
+                                                           data-id="<?php echo $recommendedProducts[$i]['id'] ?>">
+                                                            <i class="fa fa-shopping-cart"></i>
+                                                            В корзину
+                                                        </a>
                                                     </div>
                                                     <?php if ($recommendedProducts[$i]['is_new']) : ?>
                                                         <img src="/template/images/home/new.png" class="new" alt="" />
@@ -97,7 +105,11 @@
                                                                 <?php echo $recommendedProducts[$i]['name']?>
                                                             </a>
                                                         </p>
-                                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                                        <a href="/cart/addAjax/<?php echo $recommendedProducts[$i]['id']?>" class="btn btn-default add-to-cart"
+                                                           data-id="<?php echo $recommendedProducts[$i]['id'] ?>">
+                                                            <i class="fa fa-shopping-cart"></i>
+                                                            В корзину
+                                                        </a>
                                                     </div>
                                                     <?php if ($recommendedProducts[$i]['is_new']) : ?>
                                                         <img src="/template/images/home/new.png" class="new" alt="" />

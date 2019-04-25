@@ -23,7 +23,7 @@
                         </form>
                         <br/>
                         <h2>Зарегистрироваться на сайте</h2>
-                        <form action="http://shop.ua/user/register/" method="get">
+                        <form action="<?php echo $referrer ?>user/register/" method="get">
                             <input type="submit" class="btn btn-default" value="Регистрация" />
                         </form>
                         <br/>
