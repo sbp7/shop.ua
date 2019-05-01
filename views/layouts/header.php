@@ -33,7 +33,7 @@
                             <div class="contactinfo">
                                 <ul class="nav nav-pills">
                                     <li><a href="#"><i class="fa fa-phone"></i> +38 067 000 00 00</a></li>
-                                    <li><a href="#"><i class="fa fa-envelope"></i> support@gmail.com</a></li>
+                                    <li><a href="/contacts"><i class="fa fa-envelope"></i> support@gmail.com</a></li>
                                     <li><a href="/admin"> admin</a></li>
                                 </ul>
                             </div>

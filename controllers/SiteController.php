@@ -47,6 +47,12 @@ class SiteController
          require_once (ROOT. '/views/site/contact.php');
          return true;
      }
+
+      public function actionAbout ()
+     {
+         require_once (ROOT. '/views/site/about.php');
+         return true;
+     }
 }
 
 ?>
