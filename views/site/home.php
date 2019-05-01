@@ -33,14 +33,14 @@
                                 <div class="product-image-wrapper">
                                     <div class="single-products">
                                         <div class="productinfo text-center">
-                                            <img src="/template/images/products/all/<?php echo $product ['image']?>" alt="" />
-                                            <h2>$<?php echo $product ['price']?></h2>
-                                            <p><a href="/product/<?php echo $product ['id']?>">
-                                                    <?php echo $product ['name']?>
+                                            <img src="<?php echo Product::getImage($product ['id']); ?>" alt="" />
+                                            <h2>$<?php echo $product ['price']; ?></h2>
+                                            <p><a href="/product/<?php echo $product ['id']; ?>">
+                                                    <?php echo $product ['name']; ?>
                                                </a>
                                             </p>
                                             <a href="/cart/addAjax/<?php echo $product ['id']?>" class="btn btn-default add-to-cart"
-                                                data-id="<?php echo $product ['id'] ?>">
+                                                data-id="<?php echo $product ['id']; ?>">
                                                 <i class="fa fa-shopping-cart"></i>
                                                 В корзину
                                             </a>
@@ -65,58 +65,58 @@
                                     <div class="item active">
 
                                         <?php for ($i=0; $i<3; $i++) : ?>
-                                        <div class="col-sm-4">
-                                            <div class="product-image-wrapper">
-                                                <div class="single-products">
-                                                    <div class="productinfo text-center">
-                                                        <img src="/template/images/products/recommended/<?php echo $recommendedProducts[$i]['image']?>" alt="" />
-                                                        <h2>$<?php echo $recommendedProducts[$i]['price']?></h2>
-                                                        <p>
-                                                            <a href="/product/<?php echo $recommendedProducts[$i]['id']?>">
-                                                                <?php echo $recommendedProducts[$i]['name']?>
+                                            <div class="col-sm-4">
+                                                <div class="product-image-wrapper">
+                                                    <div class="single-products">
+                                                        <div class="productinfo text-center">
+                                                            <img src="/template/images/products/recommended/<?php echo $recommendedProducts[$i]['image']?>" alt="" />
+                                                            <h2>$<?php echo $recommendedProducts[$i]['price']?></h2>
+                                                            <p>
+                                                                <a href="/product/<?php echo $recommendedProducts[$i]['id']?>">
+                                                                    <?php echo $recommendedProducts[$i]['name']?>
+                                                                </a>
+                                                            </p>
+                                                            <a href="/cart/addAjax/<?php echo $recommendedProducts[$i]['id']?>" class="btn btn-default add-to-cart"
+                                                               data-id="<?php echo $recommendedProducts[$i]['id'] ?>">
+                                                                <i class="fa fa-shopping-cart"></i>
+                                                                В корзину
                                                             </a>
-                                                        </p>
-                                                        <a href="/cart/addAjax/<?php echo $recommendedProducts[$i]['id']?>" class="btn btn-default add-to-cart"
-                                                           data-id="<?php echo $recommendedProducts[$i]['id'] ?>">
-                                                            <i class="fa fa-shopping-cart"></i>
-                                                            В корзину
-                                                        </a>
+                                                        </div>
+                                                        <?php if ($recommendedProducts[$i]['is_new']) : ?>
+                                                            <img src="/template/images/home/new.png" class="new" alt="" />
+                                                        <?php endif; ?>
                                                     </div>
-                                                    <?php if ($recommendedProducts[$i]['is_new']) : ?>
-                                                        <img src="/template/images/home/new.png" class="new" alt="" />
-                                                    <?php endif; ?>
                                                 </div>
                                             </div>
-                                        </div>
                                         <?php endfor; ?>
 
                                     </div>
                                     <div class="item">
 
                                         <?php for ($i=3; $i<6; $i++) : ?>
-                                        <div class="col-sm-4">
-                                            <div class="product-image-wrapper">
-                                                <div class="single-products">
-                                                    <div class="productinfo text-center">
-                                                        <img src="/template/images/products/recommended/<?php echo $recommendedProducts[$i]['image']?>" alt="" />
-                                                        <h2>$<?php echo $recommendedProducts[$i]['price']?></h2>
-                                                        <p>
-                                                            <a href="/product/<?php echo $recommendedProducts[$i]['id']?>">
-                                                                <?php echo $recommendedProducts[$i]['name']?>
+                                            <div class="col-sm-4">
+                                                <div class="product-image-wrapper">
+                                                    <div class="single-products">
+                                                        <div class="productinfo text-center">
+                                                            <img src="/template/images/products/recommended/<?php echo $recommendedProducts[$i]['image']?>" alt="" />
+                                                            <h2>$<?php echo $recommendedProducts[$i]['price']?></h2>
+                                                            <p>
+                                                                <a href="/product/<?php echo $recommendedProducts[$i]['id']?>">
+                                                                    <?php echo $recommendedProducts[$i]['name']?>
+                                                                </a>
+                                                            </p>
+                                                            <a href="/cart/addAjax/<?php echo $recommendedProducts[$i]['id']?>" class="btn btn-default add-to-cart"
+                                                               data-id="<?php echo $recommendedProducts[$i]['id'] ?>">
+                                                                <i class="fa fa-shopping-cart"></i>
+                                                                В корзину
                                                             </a>
-                                                        </p>
-                                                        <a href="/cart/addAjax/<?php echo $recommendedProducts[$i]['id']?>" class="btn btn-default add-to-cart"
-                                                           data-id="<?php echo $recommendedProducts[$i]['id'] ?>">
-                                                            <i class="fa fa-shopping-cart"></i>
-                                                            В корзину
-                                                        </a>
+                                                        </div>
+                                                        <?php if ($recommendedProducts[$i]['is_new']) : ?>
+                                                            <img src="/template/images/home/new.png" class="new" alt="" />
+                                                        <?php endif; ?>
                                                     </div>
-                                                    <?php if ($recommendedProducts[$i]['is_new']) : ?>
-                                                        <img src="/template/images/home/new.png" class="new" alt="" />
-                                                    <?php endif; ?>
                                                 </div>
                                             </div>
-                                        </div>
                                         <?php endfor; ?>
 
                                     </div>
@@ -126,7 +126,7 @@
                                 </a>
                                 <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
                                     <i class="fa fa-angle-right"></i>
-                                </a>			
+                                </a>
                             </div>
                         </div><!--/recommended_items-->
 

@@ -31,7 +31,7 @@
                             <div class="row">
                                 <div class="col-sm-5">
                                     <div class="view-product">
-                                        <img src="/template/images/products/all/<?php echo $product ['image']?>" alt="" />
+                                        <img src="<?php echo Product::getImage($product ['id']); ?>" alt="" />
                                     </div>
                                 </div>
                                 <div class="col-sm-7">

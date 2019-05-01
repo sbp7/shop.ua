@@ -39,7 +39,7 @@
                                 <div class="product-image-wrapper">
                                     <div class="single-products">
                                         <div class="productinfo text-center">
-                                            <img src="/template/images/products/all/<?php echo $product ['image']?>" alt="" />
+                                            <img src="<?php echo Product::getImage($product ['id']); ?>" alt="" />
                                             <h2>$<?php echo $product ['price']?></h2>
                                             <p><a href="/product/<?php echo $product ['id']?>">
                                                     <?php echo $product ['name']?>
